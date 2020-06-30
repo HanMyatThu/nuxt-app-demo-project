@@ -23,7 +23,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel : 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'}
+      { rel : 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'},
     ],
     script: [
       { src: 'https://code.jquery.com/jquery-3.3.1.slim.min.js',
@@ -43,11 +43,30 @@ export default {
   css: [
     "@/assets/css/main.css"
   ],
+
+  transition: {
+    name: 'fade',
+    mode: "out-in"
+  },
+
+  /**
+   * Page Loading Bar
+   */
+  loading: {
+    color: 'black',
+    height: '5px'
+  },
+
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+      "@/plugins/scroll.js",
+      {
+        src:  "@/plugins/vueselect.js",
+        ssr: false
+      }
   ],
   /*
   ** Auto import components

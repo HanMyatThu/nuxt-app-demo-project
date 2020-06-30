@@ -1,7 +1,18 @@
+@import "vue-select/dist/vue-select.css";
+
 .jumbotron {
   border-radius: 0px;
   background-image: url("https://cdn.pixabay.com/photo/2020/04/15/12/09/summer-5046401_1280.jpg");
   height: 400px;
   background-size: cover;
   background-position: center;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
